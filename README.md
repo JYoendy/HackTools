@@ -25,6 +25,7 @@
 
 | Carpeta         | Descripción                                     |
 |-----------------|-------------------------------------------------|
+| `general/`      | Scripts generales                                |
 | `scanners/`     | Scripts para escaneo de puertos y servicios      |
 | `enum/`         | Enumeración de usuarios, shares, servicios       |
 | `exploits/`     | Scripts de explotación para vulnerabilidades     |
