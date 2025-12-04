@@ -14,13 +14,13 @@ mkmachine() {
         if [ -z "${machine_name}" ]; then
                 echo -e "${RED}Usage: mkmachine <machine_name>${NC}"
         return 1
-    fi
+        fi
 
-    local base_dir="${HOME}/htb/machines"
-    local machine_dir="${base_dir}/${machine_name}"
+        local base_dir="${HOME}/htb/machines"
+        local machine_dir="${base_dir}/${machine_name}"
 
-    mkdir -p "${machine_dir}"/{content,nmap,scripts}
+        mkdir -p "${machine_dir}"/{content,nmap,scripts}
 
-    echo -e "${GREEN}✅ Structure created:${NC} ${CYAN}${machine_dir}${NC}"
-    echo -e "${BLUE}📁 Folders:${NC} content/ nmap/ scripts/"
+        echo -e "${GREEN}✅ Structure created:${NC} ${CYAN}${machine_dir}${NC}"
+        echo -e "${BLUE}📁 Folders:${NC} content/ nmap/ scripts/"
 }
