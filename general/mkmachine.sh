@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Colores
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -11,28 +9,18 @@ NC='\033[0m'
 
 # Función principal
 mkmachine() {
-    local machine_name=$1
+        local machine_name=$1
 
-    if [ -z "${machine_name}" ]; then
-        echo -e "${RED}Usage: mkmachine <machine_name>${NC}"
+        if [ -z "${machine_name}" ]; then
+                echo -e "${RED}Usage: mkmachine <machine_name>${NC}"
         return 1
     fi
 
     local base_dir="${HOME}/htb/machines"
     local machine_dir="${base_dir}/${machine_name}"
 
-    mkdir -p "${machine_dir}"/{recon,exploit,privesc,notes,loot/screenshots}
-
-    cat > "${machine_dir}/notes/findings.md" << 'EOF'
-# Findings Template
-## Recon
-## Credentials
-## Exploits
-## Flags
-EOF
+    mkdir -p "${machine_dir}"/{content,nmap,scripts}
 
     echo -e "${GREEN}✅ Structure created:${NC} ${CYAN}${machine_dir}${NC}"
-    echo -e "${BLUE}📁 Folders:${NC} recon/ exploit/ privesc/ notes/ loot/"
-    echo -e "${YELLOW}📝 Template:${NC} notes/findings.md"
-    ls -la "${machine_dir}" | head -15
+    echo -e "${BLUE}📁 Folders:${NC} content/ nmap/ scripts/"
 }
